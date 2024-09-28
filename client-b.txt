@@ -2,3 +2,33 @@
 # Add your pseudocode to this file below this line: #
 # ------------------------------------------------- #
 
+SET x_max = <warehouse width>
+SET y_max = <warehouse height>
+
+SET x_start = <starting x-coordinate>
+SET y_start = <starting y-coordinate>
+
+SET x_dest = <destination x-coordinate>
+SET y_dest = <destination y-coordinate>
+
+SET current_x = x_start
+SET current_y = y_start
+
+WHILE current_x != x_dest OR current_y != y_dest:
+    IF current_x < x_dest THEN:
+        PRINT "Move East"
+        current_x = current_x + 1
+    ELSE IF current_x > x_dest THEN:
+        PRINT "Move West"
+        current_x = current_x - 1
+    ENDIF
+
+    IF current_y < y_dest THEN:
+        PRINT "Move North"
+        current_y = current_y + 1
+    ELSE IF current_y > y_dest THEN:
+        PRINT "Move South"
+        current_y = current_y - 1
+    ENDIF
+
+PRINT "You have arrived at your destination!"

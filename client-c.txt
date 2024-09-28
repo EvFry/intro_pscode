@@ -2,3 +2,5 @@
 # Add your pseudocode to this file below this line: #
 # ------------------------------------------------- #
 
+FOR i = 2 TO 50 STEP 2:
+    PRINT i

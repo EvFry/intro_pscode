@@ -2,3 +2,23 @@
 # Add your pseudocode to this file below this line: #
 # ------------------------------------------------- #
 
+SET secret_number = RANDOM(1, 10)
+SET max_attempts = 3
+
+FOR attempt FROM 1 TO max_attempts:
+    PRINT "Guess a number between 1 and 10:"
+    READ player_guess
+
+    IF player_guess == secret_number THEN:
+        PRINT "Congratulations! You guessed the correct number!"
+        EXIT
+    ELSE:
+        IF player_guess > secret_number THEN:
+            PRINT "Too high!"
+        ELSE:
+            PRINT "Too low!"
+
+        IF attempt < max_attempts THEN:
+            PRINT "Try again. You have " + (max_attempts - attempt) + " attempts left."
+        ELSE:
+            PRINT "Sorry, the correct number was " + secret_number + "."
